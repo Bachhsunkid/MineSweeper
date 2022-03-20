@@ -1,3 +1,6 @@
+khung giao diá»‡n -> class button -> hoÃ n thÃ nh giao diá»‡n -> táº¡o máº£ng mÃ¬n, Ä‘iá»�n sá»‘ máº£ng -> Báº¯t sá»± kiá»‡n cho button
+-> xá»­ lÃ½ má»Ÿ Ã´, tháº¯ng thua ->
+
 --LoadData: cat hinh anh tu file png
 ================================================================
 --World:
@@ -5,11 +8,11 @@
 	+ dienSo() : kiem tra 8 o xung quanh va dem so bom
 	+ open(i, j): Mo o
 ================================================================
---GameFrame:
+--GameFrame: Tao khung, xu li menu
 	+ GameFrame(int w, int h, int boom): khoi tao game
 	+ main()
 	+ getter/setter
---GamePannel: Menu game
+--GamePannel: Bat su kien cho game
 	+ GamePannel(int w, int h, int boom, GameFrame gameFrame)
 	
 	@Override from MouseListener
@@ -34,7 +37,7 @@
 	+ paint(Graphics g)
 
 	+ getter/setter
---PannelNotification
+--PannelNotification: thanh thong bao: gom boom, mat cuoi, thoi gian
 	+ PanelNotification(GamePanel game)
 	+ updateLbTime()
 	+ updateLbBoom()
@@ -49,4 +52,4 @@
 	+ paint(Graphics g)
 	
 	+ getter/setter
-Taao khung giao dien -> ramdom boom -> dien so -> bat su kien mo o -> 
+Tao khung giao dien -> ramdom boom -> dien so -> bat su kien mo o -> 

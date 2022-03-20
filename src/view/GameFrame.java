@@ -3,7 +3,6 @@ package view;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
@@ -40,14 +39,6 @@ public class GameFrame extends JFrame {
 		menu.add(hard = new JMenuItem("Hard"));
 		menu.addSeparator();
 		menu.add(exit = new JMenuItem("Exit"));
-		
-//		if (w == 8) {
-//			basic.setIcon(new ImageIcon(loadData.getListImage().get("tich")));
-//		} else if (w == 16) {
-//			nomal.setIcon(new ImageIcon(loadData.getListImage().get("tich")));
-//		} else {
-//			hard.setIcon(new ImageIcon(loadData.getListImage().get("tich")));
-//		}
 		
 		basic.addActionListener(new ActionListener() {
 

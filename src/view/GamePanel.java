@@ -17,20 +17,27 @@ public class GamePanel extends JPanel implements MouseListener {
 	private static final long serialVersionUID = 1L;
 	private PanelNotification p1;
 	private PanelPlayer p2;
+
 	private GameFrame gameFrame;
+
 	private World world;
+
 	private int w;
 	private int h;
 	private int boom;
 
 	public GamePanel(int w, int h, int boom, GameFrame gameFrame) {
+
 		this.gameFrame = gameFrame;
+
 		this.boom = boom;
 		this.w = w;
 		this.h = h;
 
 		world = new World(w, h, boom, this);
+
 		setLayout(new BorderLayout(20, 20));
+
 		add(p1 = new PanelNotification(this), BorderLayout.NORTH);
 		add(p2 = new PanelPlayer(this), BorderLayout.CENTER);
 	}
@@ -60,7 +67,8 @@ public class GamePanel extends JPanel implements MouseListener {
 							getP1().getBt().setStage(ButtonSmile.lose);
 							getP1().getBt().repaint();
 
-							int option = JOptionPane.showConfirmDialog(this, "You lost, play again?", "Notification", JOptionPane.YES_NO_OPTION);
+							int option = JOptionPane.showConfirmDialog(this, "You lost, play again?", "Notification",
+									JOptionPane.YES_NO_OPTION);
 							if (option == JOptionPane.YES_OPTION) {
 								gameFrame.setVisible(false);
 								new GameFrame(w, h, boom);
@@ -73,8 +81,10 @@ public class GamePanel extends JPanel implements MouseListener {
 							getP1().getBt().setStage(ButtonSmile.win);
 							getP1().getBt().repaint();
 
-							int option = JOptionPane.showConfirmDialog(this, "You win, play again ?", "Notification", JOptionPane.YES_NO_OPTION);
+							int option = JOptionPane.showConfirmDialog(this, "You win, play again ?", "Notification",
+									JOptionPane.YES_NO_OPTION);
 							if (option == JOptionPane.YES_OPTION) {
+								gameFrame.setVisible(false);
 								new GameFrame(w, h, boom);
 							}
 						}
